@@ -2,3 +2,4 @@
 oidc/
 terra-*
 environments/eks/*
+terraform.*

@@ -1,8 +1,8 @@
 module "s3" {
-  source = "git@github.com:Kenmakhanu/s3-backend-repo.git//s3-module?ref=v1.2.1"
+  source = "git@github.com:luizy28/s3-backend-repo.git//s3-module?ref=v1.4.0"
 }
 
-#Backend configuration
+#backend configuration
 terraform {
   required_providers {
     aws = {
@@ -12,13 +12,13 @@ terraform {
   }
 
   backend "s3" {
-    bucket  = "landmark-automation-kenmak"
-    region  = "us-west-2"
-    key     = "s3/terraform.tfstate"
+    bucket  = "bootcamp32-dev-13"
+    region  = "us-east-1"
+    key     = "action/terraform.tfstate"
     encrypt = true
-  }
+  } 
 }
 
 provider "aws" {
-  region = "us-west-2"
+  region = "us-east-1"
 }
