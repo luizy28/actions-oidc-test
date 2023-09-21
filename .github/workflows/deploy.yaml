@@ -34,7 +34,7 @@ jobs:
       - name: init
         run: |
           eval 'ssh-agent -s'
-          ssh-add - <<< '${{secrets.SSH_KEY_GITHUB_ACTIONS}}'gi
+          ssh-add - <<< '${{secrets.SSH_KEY_GITHUB_ACTIONS}}'
           terraform init
       - name: Validate
         run: terraform validate
