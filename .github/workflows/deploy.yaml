@@ -33,8 +33,8 @@ jobs:
         run: terraform fmt -check
       - name: init
         run: |
-          eval 'ssh-agent -s'
-          ssh-add - <<< '${{secrets.SSH_KEY_GITHUB_ACTIONS}}'
+          eval "$(ssh-agent -s)"
+          ssh-add - <<< "${{secrets.SSH_KEY_GITHUB_ACTIONS}}"
           terraform init
       - name: Validate
         run: terraform validate
