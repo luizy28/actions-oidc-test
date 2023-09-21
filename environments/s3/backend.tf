@@ -16,7 +16,7 @@ terraform {
     region  = "us-east-1"
     key     = "action/terraform.tfstate"
     encrypt = true
-  } 
+  }
 }
 
 provider "aws" {
