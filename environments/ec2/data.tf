@@ -1,4 +1,4 @@
-  #Declaring the ami data source used for the ec2
+#Declaring the ami data source used for the ec2
 data "aws_ami" "demo_ec2" {
   most_recent = true
   owners      = ["amazon"]

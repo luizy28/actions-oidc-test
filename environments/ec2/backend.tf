@@ -3,8 +3,8 @@ module "ec2" {
 }
 
 resource "aws_instance" "demo_ec2" {
-  ami       = data.aws_ami.demo_ec2.id
-  subnet_id = data.terraform_remote_state.network.outputs.public_subnets[1]
+  ami           = data.aws_ami.demo_ec2.id
+  subnet_id     = data.terraform_remote_state.network.outputs.public_subnets[1]
   instance_type = var.instance_type
 
   tags = {
