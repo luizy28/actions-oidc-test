@@ -1,13 +1,21 @@
-#Declaring the ami data source used for the ec2
-data "aws_ami" "demo_ec2" {
+# Get latest AMI ID for Amazon Linux2 OS
+/*data "aws_ami" "amzlinux2" {
   most_recent = true
   owners      = ["amazon"]
   filter {
-    name   = "architecture"
-    values = ["arm64"]
+    name   = "name"
+    values = ["amzn2-ami-hvm-*-gp2"]
   }
   filter {
-    name   = "name"
-    values = ["al2023-ami-2023*"]
+    name   = "root-device-type"
+    values = ["ebs"]
   }
-}
+  filter {
+    name   = "virtualization-type"
+    values = ["hvm"]
+  }
+  filter {
+    name   = "architecture"
+    values = ["x86_64"]
+  }
+}*/
