@@ -2,8 +2,8 @@ module "ec2" {
   source = "git@github.com:luizy28/s3-backend-repo.git//ec2-module?"
 }
 
-resource "aws_instance" "demo_ec2" {
-  #ami           = data.aws_ami.this.id
+/*resource "aws_instance" "demo_ec2" {
+  ami           = data.aws_ami.this.id
   subnet_id     = data.terraform_remote_state.network.outputs.public_subnets[1]
   instance_type = var.instance_type
 
@@ -11,7 +11,7 @@ resource "aws_instance" "demo_ec2" {
     "Name" = "demo_ec2"
   }
 }
-
+*/
 #backend configuration
 terraform {
   required_providers {
